@@ -143,8 +143,15 @@ public class WordManager {
 
         for (int i = 0; i < countOfWord; i++) {
             int randomIndex = random.nextInt(wordPool.size());
-            VisibleWord randomVisibleWord = wordPool.get(randomIndex);
-            exercisePool.add(randomVisibleWord.getVisibleWord());
+            String word = wordPool.get(randomIndex).getVisibleWord();
+            int randomPadding = random.nextInt(widthOfLine - word.length());
+
+            String leftSpaceString = " ".repeat(randomPadding);
+            String rightSpaceString = " ".repeat(widthOfLine - word.length() - randomPadding);
+
+            String randomString = leftSpaceString + word + rightSpaceString;
+
+            exercisePool.add(randomString);
         }
     }
 
@@ -165,7 +172,20 @@ public class WordManager {
 
     // run exercise using makeExercise, checkAnswer, and displayExercise method until user enter all correct words
     public void runExercise(Scanner scanner, int countOfWord, int widthOfLine) {
+        makeExercise(countOfWord, widthOfLine);
 
+        while(true) {
+            Iterator<String> iterator = exercisePool.iterator();
+            while (iterator.hasNext()) {
+                String randomString = iterator.next();
+                System.out.println(randomString);
+            }
+
+            System.out.print("Enter a word: ");
+            String answer = scanner.nextLine();
+
+            
+        }
     }
 
     // return VisibleWord object which is stored at 'index' in Vector
