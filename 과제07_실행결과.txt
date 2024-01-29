@@ -1,0 +1,128 @@
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Load
+Enter the file name: text.txt
+File load is completed!!
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+119 word(s) are stored as follows:
+experience population accident practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Insert
+Enter the sentence: changwon
+Data insertion is completed!!
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Insert
+Enter the sentence: changwon
+Data insertion is completed!!
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+121 word(s) are stored as follows:
+experience population accident practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform changwon changwon 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+show
+wrong command
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Replace
+Find what: experience
+Replace with: Test
+1 word(s) are replaced from experience to Test
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+121 word(s) are stored as follows:
+Test population accident practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform changwon changwon 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Replace
+Find what: experience
+Replace with: Exam
+1 word(s) are replaced from experience to Exam
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+121 word(s) are stored as follows:
+Exam population accident practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform changwon changwon 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Replace
+Find what: Korea
+Replace with: Test
+Can not find "Korea"
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Delete
+Delete what: experience
+1 word(s) are deleted.
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+120 word(s) are stored as follows:
+population accident practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform changwon changwon 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Replace
+Find what: accident
+Replace with: Test
+1 word(s) are replaced from accident to Test
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+120 word(s) are stored as follows:
+population Test practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform changwon changwon 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Restore
+original word(s) are restored
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Print
+120 word(s) are stored as follows:
+population accident practice education direction sophomore mammal symbol dialogue foundation wealth monument athlete glory treasure information supply situation score appetite surface competition pause effect dialogue between prairie adult stethoscope electricity temperature feast mystery order limit pronunciation thermometer spirit statue section liberty republic furniture pilgrim affair method parade greeting burden increase effort rein purpose decrease section solution comfort amount public language tradition promise grade honor subject project no smoking resources series government communication admiral oath exercise triumph edge appointment comparison design adventure object voyage junior view ancestor sculpture respect relative clue interest communication superstition debt instrument damage habit source figure custom biology revolution senior traffic danger hydrogen activity mass advice pollution cause funeral democracy control worth system general uniform changwon changwon 
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Exercise
+count of words: 4
+width of line: 100
+                                                         design
+                                    triumph
+                                                                           clue
+                           order
+
+
+Enter a word: order
+1 out of 4 words are correct
+                                                         design
+                                    triumph
+                                                                           clue
+                                
+
+
+Enter a word: triumph
+2 out of 4 words are correct
+                                                         design
+                                           
+                                                                           clue
+                                
+
+
+Enter a word: design
+3 out of 4 words are correct
+                                                               
+                                           
+                                                                           clue
+                                
+
+
+Enter a word: clu
+3 out of 4 words are correct
+                                                               
+                                           
+                                                                           clue
+                                
+
+
+Enter a word: clue
+4 out of 4 words are correct
+
+Enter the command(Insert, Load, Replace, Delete, Restore, Print, Exercise, Exit): 
+Exit
+
+Program terminates
