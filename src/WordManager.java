@@ -159,32 +159,51 @@ public class WordManager {
     // if the answer is included, replace the word of exercisePool to white space with equal size
     // return the number of matched words
     public int checkAnswer(String answer) {
-        int a = 0;
-        return a;
+        int matchedWords = 0;
+
+        Iterator<String> iterator = exercisePool.iterator();
+        while (iterator.hasNext()) {
+            String randomString = iterator.next();
+            if (randomString.contains(answer)) {
+                matchedWords++;
+                // Replace the matched word with spaces
+                exercisePool.set(exercisePool.indexOf(randomString), " ".repeat(randomString.length()));
+            }
+        }
+
+        return matchedWords;
     }
 
     // make a sentence from exercisePool vector for displaying the exercise
     // return the display sentence
     public String displayExercise() {
-        String a = "";
-        return a;
+        StringBuilder displaySentence = new StringBuilder();
+
+        for (String randomString : exercisePool) {
+            displaySentence.append(randomString);
+        }
+
+        return displaySentence.toString();
     }
 
     // run exercise using makeExercise, checkAnswer, and displayExercise method until user enter all correct words
     public void runExercise(Scanner scanner, int countOfWord, int widthOfLine) {
         makeExercise(countOfWord, widthOfLine);
+        Scanner temp = new Scanner(System.in);
 
-        while(true) {
-            Iterator<String> iterator = exercisePool.iterator();
-            while (iterator.hasNext()) {
-                String randomString = iterator.next();
-                System.out.println(randomString);
-            }
-
+        while (true) {
+            System.out.println(displayExercise());
             System.out.print("Enter a word: ");
-            String answer = scanner.nextLine();
+            String answer = temp.nextLine();
 
-            
+            int matchedWords = checkAnswer(answer);
+
+            if (matchedWords == countOfWord) {
+                System.out.println("Congratulations! You entered all correct words.");
+                break;
+            } else {
+                System.out.println("Matched words: " + matchedWords);
+            }
         }
     }
 
