@@ -42,7 +42,14 @@ public class WordManager {
     // to divide sentence to words, and words are stored in String array.
     // returns String array
     public String[] divideWords(String sentence) {
-        String[] words = sentence.split("\\s+");
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+        int numberOfTokens = tokenizer.countTokens();
+        String[] words = new String[numberOfTokens];
+
+        for(int i = 0; i < numberOfTokens; i++) {
+            words[i] = tokenizer.nextToken();
+        }
+
         return words;
     }
 
@@ -166,7 +173,6 @@ public class WordManager {
             String randomString = iterator.next();
             if (randomString.contains(answer)) {
                 matchedWords++;
-                // Replace the matched word with spaces
                 exercisePool.set(exercisePool.indexOf(randomString), " ".repeat(randomString.length()));
             }
         }
