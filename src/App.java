@@ -18,7 +18,6 @@ public class App {
                 else
                     System.out.println("No sentence entered");
             }
-            
             else if(inputWord.equals("Load")) {
                 System.out.print("Enter the file name: ");
                 String fileName = scanner.nextLine();
@@ -28,7 +27,6 @@ public class App {
                 else
                     System.out.println("File not found");
             }
-
             else if(inputWord.equals("Replace")) {
                 System.out.print("Find what: ");
                 String findWord = scanner.nextLine();
@@ -43,7 +41,6 @@ public class App {
                 else
                     System.out.println(replacedCount + " word(s) are replaced from experience to Test");
             }
-            
             else if(inputWord.equals("Delete")) {
                 System.out.print("Delete what: ");
                 String word = scanner.nextLine();
@@ -55,32 +52,32 @@ public class App {
                 else
                     System.out.println(deletedCount + " word(s) are deleted");
             }
-            
             else if(inputWord.equals("Restore")) {
                 wordManager.restore();
                 System.out.println("original word(s) are restored");
             }
-            
             else if(inputWord.equals("Print")) {
                 wordManager.print();
             }
-            
             else if(inputWord.equals("Exercise")) {
-                System.out.print("count of words: ");
-                int countOfWord = scanner.nextInt();
+                try {
+                    System.out.print("count of words: ");
+                    int countOfWord = Integer.parseInt(scanner.nextLine());
 
-                System.out.print("width of line: ");
-                int widthOfLine = scanner.nextInt();
+                    System.out.print("width of line: ");
+                    int widthOfLine = Integer.parseInt(scanner.nextLine());
 
-                wordManager.runExercise(scanner, countOfWord, widthOfLine);
+                    wordManager.runExercise(scanner, countOfWord, widthOfLine);
+                }
+                catch(NumberFormatException e) {
+                    System.out.println("You should enter only number");
+                }
             }
-            
             else if(inputWord.equals("Exit")) {
                 scanner.close();
                 System.out.println("Program terminates");
                 System.exit(0);
             }
-
             else {
                 System.out.println("worng command");
             }

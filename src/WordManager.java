@@ -11,6 +11,7 @@ import java.util.Vector;
 public class WordManager {
     private Vector<VisibleWord> wordPool;           // a total of words
     private Vector<String> exercisePool;       // words for exercise
+    private int matchedWords = 0;
 
     // constructor
     public WordManager() {
@@ -108,7 +109,7 @@ public class WordManager {
         Iterator<VisibleWord> iterator = wordPool.iterator();
         while (iterator.hasNext()) {
             VisibleWord visibleWord = iterator.next();
-            if (visibleWord.getOriginalWord().equals(word)) {
+            if (visibleWord.getVisibleWord().equals(word)) {
                 iterator.remove();
                 deletedCount++;
             }
@@ -151,6 +152,10 @@ public class WordManager {
         for (int i = 0; i < countOfWord; i++) {
             int randomIndex = random.nextInt(wordPool.size());
             String word = wordPool.get(randomIndex).getVisibleWord();
+
+            if(widthOfLine < word.length())
+                widthOfLine = word.length() + 1;
+            
             int randomPadding = random.nextInt(widthOfLine - word.length());
 
             String leftSpaceString = " ".repeat(randomPadding);
@@ -166,8 +171,9 @@ public class WordManager {
     // if the answer is included, replace the word of exercisePool to white space with equal size
     // return the number of matched words
     public int checkAnswer(String answer) {
-        int matchedWords = 0;
-
+        if(answer.trim().isEmpty())
+            return matchedWords;
+        
         Iterator<String> iterator = exercisePool.iterator();
         while (iterator.hasNext()) {
             String randomString = iterator.next();
@@ -186,7 +192,7 @@ public class WordManager {
         StringBuilder displaySentence = new StringBuilder();
 
         for (String randomString : exercisePool) {
-            displaySentence.append(randomString);
+            displaySentence.append(randomString).append("\n");
         }
 
         return displaySentence.toString();
@@ -194,34 +200,37 @@ public class WordManager {
 
     // run exercise using makeExercise, checkAnswer, and displayExercise method until user enter all correct words
     public void runExercise(Scanner scanner, int countOfWord, int widthOfLine) {
-        makeExercise(countOfWord, widthOfLine);
-        Scanner temp = new Scanner(System.in);
+        if(wordPool.size() == 0) {
+            System.out.println("no words stored for exercise");
+            return;
+        }
+        else {
+            makeExercise(countOfWord, widthOfLine);
 
-        while (true) {
-            System.out.println(displayExercise());
-            System.out.print("Enter a word: ");
-            String answer = temp.nextLine();
+            while (true) {
+                System.out.println(displayExercise());
+                System.out.print("Enter a word: ");
+                String answer = scanner.nextLine();
 
-            int matchedWords = checkAnswer(answer);
+                checkAnswer(answer);
 
-            if (matchedWords == countOfWord) {
-                System.out.println("Congratulations! You entered all correct words.");
-                break;
-            } else {
-                System.out.println("Matched words: " + matchedWords);
+                System.out.println(matchedWords + " out of " + countOfWord + " words are correct");
+
+                if (matchedWords == countOfWord) {
+                    matchedWords = 0;
+                    break;
+                }
             }
         }
     }
 
     // return VisibleWord object which is stored at 'index' in Vector
     public VisibleWord getData(int index) {
-        VisibleWord a = new VisibleWord();
-        return a;
+        return wordPool.get(index);
     }
 
     // return VisibleWord object which is recently stored in Vector
     public VisibleWord getLastData() {
-        VisibleWord a = new VisibleWord();
-        return a;
+        return wordPool.lastElement();
     }
 }
